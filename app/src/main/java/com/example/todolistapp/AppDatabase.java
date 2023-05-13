@@ -52,7 +52,9 @@ public abstract class AppDatabase extends RoomDatabase {
                 protected Void doInBackground(Void... voids) {
                     UserDao userDao = instance.userDao();
                     User adminUser = new User("alex", "123", true);
+                    User User = new User("user", "123", false);
                     userDao.insertAdmin(adminUser);
+                    userDao.insertAdmin(User);
                     Log.d("AppDatabase", "Admin user added to the database");
                     return null;
                 }
