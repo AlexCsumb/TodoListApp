@@ -21,4 +21,13 @@ public interface ReminderDao {
 
     @Delete
     void delete(Reminder reminder);
+
+    @Query("SELECT * FROM reminders")
+    List<Reminder> getAllReminders();
+
+    @Query("SELECT * FROM tasks WHERE taskId = :taskId")
+    Task findTaskById(long taskId);
+
+    @Query("SELECT * FROM reminders WHERE taskId IN (SELECT taskId FROM tasks WHERE taskName = :taskName)")
+    Reminder findByTaskName(String taskName);
 }

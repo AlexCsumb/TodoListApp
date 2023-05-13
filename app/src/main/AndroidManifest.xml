@@ -21,6 +21,25 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+        <activity
+            android:name=".TaskActivity"
+            android:label="Task Activity" />
+        <activity
+            android:name=".ReminderActivity"
+            android:label="Reminder Activity" />
+        <activity
+            android:name=".AdminActivity"
+            android:label="Admin Activity" />
+        <activity android:name="ViewReminderActivity"
+            android:label="View Reminder Activity">
+        </activity>
+        <activity
+            android:name=".ViewTaskActivity"
+            android:label="View Task" />
+        <activity android:name=".DeleteTaskActivity" />
+        <activity android:name=".DeleteReminderActivity" />
+
+
     </application>
 
 </manifest>

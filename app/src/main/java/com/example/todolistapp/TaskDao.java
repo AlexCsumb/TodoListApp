@@ -21,4 +21,10 @@ public interface TaskDao {
 
     @Delete
     void delete(Task task);
+
+    @Query("SELECT * FROM tasks")
+    List<Task> getAllTasks();
+
+    @Query("SELECT * FROM tasks WHERE taskName = :name")
+    Task findByName(String name);
 }
